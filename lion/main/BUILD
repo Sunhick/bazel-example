@@ -5,5 +5,6 @@ cc_binary(
        "//console:console",
        "//graphics:graphics",
        "@tiger//session:session",
+       "@gnu//gnu:profile",
     ],
 )

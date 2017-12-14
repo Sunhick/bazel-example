@@ -4,3 +4,9 @@ local_repository(
     name = "tiger",
     path = "../tiger",
 )
+
+git_repository(
+    name = "gnu",
+    remote = "https://github.com/Sunhick/bazel101-libs.git",
+    tag = "v1.0",
+)
