@@ -3,6 +3,7 @@
 #include "console/console.h"
 #include "graphics/graphics.h"
 #include "main/common.h"
+#include "session/session.h"
 
 #include <iostream>
 
@@ -14,6 +15,7 @@ int main(UNUSED int argc, UNUSED char **argv) {
   writer.print("Welcome to bazel101 tutorials!");
 
   graphics_init();
+  start_session();
 
   return 0;
 }

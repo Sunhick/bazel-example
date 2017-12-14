@@ -4,5 +4,6 @@ cc_binary(
     deps = [
        "//console:console",
        "//graphics:graphics",
+       "@tiger//session:session",
     ],
 )

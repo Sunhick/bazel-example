@@ -1,1 +1,6 @@
 workspace(name = "lion")
+
+local_repository(
+    name = "tiger",
+    path = "../tiger",
+)
