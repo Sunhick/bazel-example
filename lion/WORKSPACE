@@ -1,1 +1,1 @@
-workspace(name = "bazel101")
+workspace(name = "lion")
