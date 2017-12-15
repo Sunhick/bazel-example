@@ -7,6 +7,7 @@
 #include "history/history.h"
 
 #include <console/console.h>
+#include <math.h>
 
 #include <iostream>
 
@@ -14,6 +15,8 @@ using namespace std;
 using namespace bazel101::console;
 using namespace bazel101::profile;
 using namespace bazel101::history;
+
+using math::adder;
 
 int main(UNUSED int argc, UNUSED char **argv) {
   Console writer;
@@ -27,6 +30,9 @@ int main(UNUSED int argc, UNUSED char **argv) {
 
   History h;
   h.clearHistory();
+
+  adder calc;
+  cout << "sum (90, 10) = " << calc.add(90, 10) << endl;
 
   return 0;
 }

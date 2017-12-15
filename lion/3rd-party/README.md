@@ -1,0 +1,1 @@
+# Precompiled binaries consumption in bazel.
