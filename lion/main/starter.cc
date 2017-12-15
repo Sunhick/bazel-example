@@ -1,10 +1,11 @@
 // Copyright (C) 2017 by Sunil
 
-#include "console/console.h"
 #include "graphics/graphics.h"
 #include "main/common.h"
 #include "session/session.h"
 #include "gnu/profile.h"
+
+#include <console/console.h>
 
 #include <iostream>
 

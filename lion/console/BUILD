@@ -1,6 +1,15 @@
+cc_inc_library (
+    name = "console",
+    hdrs = ["console.h"],
+    deps = [
+        ":console_impl"
+    ],
+    visibility = ["//visibility:public"],
+)
+
 cc_library(
-   name = "console",
+   name = "console_impl",
    srcs = ["console.cc"],
    hdrs = ["console.h"],
-   visibility = ["//main:__pkg__"],
+   visibility = ["//visibility:public"],
 )
