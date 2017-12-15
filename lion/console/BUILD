@@ -1,17 +1,17 @@
 cc_inc_library (
-    name = "console",
-    hdrs = ["console.h"],
+    name = "libconsole",
+    hdrs = glob(["*.h"]),
     deps = [
-        ":console_impl"
+        ":console"
     ],
     visibility = ["//visibility:public"],
 )
 
 cc_library(
-   name = "console_impl",
+   name = "console",
    defines = ["VERBOSE", "MORE"],
-   srcs = ["console.cc"],
-   hdrs = ["console.h"],
+   srcs = glob(["*.cc"]),
+   hdrs = glob(["*.h"]),
    visibility = ["//visibility:public"],
    linkstatic = 0,
 )

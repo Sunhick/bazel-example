@@ -1,8 +1,8 @@
 cc_binary(
     name = "main",
-    srcs = ["starter.cc", "common.h"],
+    srcs = glob(["*.cc", "*.h"]),
     deps = [
-       "//console:console",
+       "//console:libconsole",
        "//graphics:graphics",
        "@tiger//session:session",
        "@gnu//gnu:profile",
