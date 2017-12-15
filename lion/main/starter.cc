@@ -1,15 +1,15 @@
 // Copyright (C) 2017 by Sunil
 
-#include "graphics/graphics.h"
-#include "main/common.h"
-#include "session/session.h"
-#include "gnu/profile.h"
-#include "history/history.h"
+#include <iostream>
 
 #include <console/console.h>
-#include "3rd-party/include/math.h"
 
-#include <iostream>
+#include "3rd-party/include/math.h"
+#include "gnu/profile.h"
+#include "graphics/graphics.h"
+#include "history/history.h"
+#include "main/common.h"
+#include "session/session.h"
 
 using namespace std;
 using namespace bazel101::console;
