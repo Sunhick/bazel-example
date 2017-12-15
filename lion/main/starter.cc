@@ -7,7 +7,7 @@
 #include "history/history.h"
 
 #include <console/console.h>
-#include <math.h>
+#include "3rd-party/include/math.h"
 
 #include <iostream>
 
