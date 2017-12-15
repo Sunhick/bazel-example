@@ -17,8 +17,16 @@ Console::~Console() {
 }
 
 void Console::print(std::string msg) {
+#ifdef VERBOSE
   auto id = "<def>";
-  cout << "ID: " << id << "MSG: " << msg << endl;
+#else
+  auto id = "<undef>";
+#endif
+  cout << "ID: " << id << " MSG: " << msg << endl;
+
+#ifdef MORE
+  cout << "More ....defined" << endl;
+#endif
 }
 
 } // namespace console
