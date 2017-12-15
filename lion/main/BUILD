@@ -8,5 +8,6 @@ cc_binary(
        "@gnu//gnu:profile",
        "@duck//:history"
     ],
-    linkstatic = 0
+    linkstatic = 0,
+    visibility = ["//visibility:public"]
 )
