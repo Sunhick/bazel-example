@@ -6,6 +6,7 @@ cc_binary(
        "//graphics:graphics",
        "@tiger//session:session",
        "@gnu//gnu:profile",
+       "@duck//:history"
     ],
     linkstatic = 0
 )

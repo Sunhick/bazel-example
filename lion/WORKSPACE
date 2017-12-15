@@ -10,3 +10,10 @@ git_repository(
     remote = "https://github.com/Sunhick/bazel101-libs.git",
     tag = "v1.0.1",
 )
+
+# Import a non-bazel project deps
+new_local_repository(
+    name = "duck",
+    path = "../duck",
+    build_file = "BUILD.duck",
+)
