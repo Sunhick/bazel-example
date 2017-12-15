@@ -10,6 +10,7 @@
 #include "history/history.h"
 #include "main/common.h"
 #include "session/session.h"
+#include "objc/interface.h"
 
 using namespace std;
 using namespace bazel101::console;
@@ -17,6 +18,8 @@ using namespace bazel101::profile;
 using namespace bazel101::history;
 
 using math::adder;
+
+class Greet;
 
 int main(UNUSED int argc, UNUSED char **argv) {
   Console writer;
@@ -34,5 +37,10 @@ int main(UNUSED int argc, UNUSED char **argv) {
   adder calc;
   cout << "sum (90, 10) = " << calc.add(90, 10) << endl;
 
+
+  // calling objective c from c++
+  Greet g;
+  greet(&g, nullptr);
+  
   return 0;
 }

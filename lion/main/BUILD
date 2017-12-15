@@ -5,6 +5,7 @@ cc_binary (
        "//console:libconsole",
        "//graphics:graphics",
        "//3rd-party:math2",
+       "//objc:objc",
        "@tiger//session:session",
        "@gnu//gnu:profile",
        "@duck//:history"
