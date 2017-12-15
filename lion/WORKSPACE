@@ -10,7 +10,7 @@ local_repository(
 new_local_repository(
     name = "duck",
     path = "../duck",
-    build_file = "BUILD.duck",
+    build_file = "duck.BUILD",
 )
 
 # remote bazel deps
