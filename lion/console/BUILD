@@ -9,8 +9,9 @@ cc_inc_library (
 
 cc_library(
    name = "console_impl",
-   defines = ["VERBOSE", "MOR"],
+   defines = ["VERBOSE", "MORE"],
    srcs = ["console.cc"],
    hdrs = ["console.h"],
    visibility = ["//visibility:public"],
+   linkstatic = 0,
 )

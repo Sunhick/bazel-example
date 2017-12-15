@@ -7,4 +7,5 @@ cc_binary(
        "@tiger//session:session",
        "@gnu//gnu:profile",
     ],
+    linkstatic = 0
 )
