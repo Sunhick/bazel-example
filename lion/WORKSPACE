@@ -1,19 +1,22 @@
 workspace(name = "lion")
 
+# local bazel deps
 local_repository(
     name = "tiger",
     path = "../tiger",
 )
 
+# local non-bazel deps
+new_local_repository(
+    name = "duck",
+    path = "../duck",
+    build_file = "BUILD.duck",
+)
+
+# remote bazel deps
 git_repository(
     name = "gnu",
     remote = "https://github.com/Sunhick/bazel101-libs.git",
     tag = "v1.0.1",
 )
 
-# Import a non-bazel project deps
-new_local_repository(
-    name = "duck",
-    path = "../duck",
-    build_file = "BUILD.duck",
-)

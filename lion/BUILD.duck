@@ -1,6 +1,6 @@
 cc_library(
     name = "history",
-    srcs = ["history/history.cc"],
-    hdrs = ["history/history.h"],
+    srcs = glob(["history/*.cc"]),
+    hdrs = glob(["history/*.h"]),
     visibility = ["//visibility:public"],
 )
