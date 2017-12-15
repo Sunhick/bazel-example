@@ -34,3 +34,5 @@
 # bazel build files
 bazel-*
 TODO
+
+.DS_Store
