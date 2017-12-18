@@ -1,4 +1,18 @@
-cc_binary (
+load("//extensions:logger.bzl", "logger")
+
+logger(
+    name = "greet",
+    deps = [
+        "dep1"
+    ],
+    msg = "Happy coding & building..."
+)
+
+logger(
+    name = "dep1",
+)
+
+cc_binary(
     name = "main",
     srcs = glob(["*.cc", "*.h"]),
     deps = [
