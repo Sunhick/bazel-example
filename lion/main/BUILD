@@ -4,8 +4,8 @@ load("@tiger//extensions:rules.bzl", "sum")
 logger(
     name = "greet",
     deps = [
-        "dep1",
-        "adder",
+        ":dep1",
+        ":adder",
     ],
     msg = "Happy coding & building..."
 )
