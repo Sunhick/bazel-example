@@ -1,5 +1,11 @@
-load("//extensions:logger.bzl", "logger")
-load("@tiger//extensions:rules.bzl", "sum")
+load(
+    "//extensions:logger.bzl",
+    "logger"
+)
+load(
+    "@tiger//extensions:rules.bzl",
+    "sum"
+)
 
 logger(
     name = "greet",
@@ -22,14 +28,22 @@ sum(
 
 cc_binary(
     name = "main",
-    srcs = glob(["*.cc", "*.h"]),
+    srcs = [
+        "starter.cc",
+        "common.h",
+    ] + select({
+        "//tools/conditions:windows" : ["windows.cc"],
+        "//tools/conditions:linux" : ["linux.cc"]
+    }),
     deps = [
-       "//console:libconsole",
-       "//graphics:graphics",
-       "//3rd-party:math2",
+        "//console:libconsole",
+        "//graphics:graphics",
+        # math2 is precompiled for darwin.
+        # commenting this for now.
+        # "//3rd-party:math2",
        "@tiger//session:session",
-       "@gnu//gnu:profile",
-       "@duck//:history"
+        "@gnu//gnu:profile",
+        "@duck//:history"
     ],
     linkstatic = 0,
     visibility = ["//visibility:public"]

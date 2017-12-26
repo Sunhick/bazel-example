@@ -4,7 +4,7 @@
 
 #include <console/console.h>
 
-#include "3rd-party/include/math.h"
+// #include "3rd-party/include/math.h"
 #include "gnu/profile.h"
 #include "graphics/graphics.h"
 #include "history/history.h"
@@ -16,11 +16,13 @@ using namespace bazel101::console;
 using namespace bazel101::profile;
 using namespace bazel101::history;
 
-using math::adder;
+// using math::adder;
 
 class Greet;
 
 int main(UNUSED int argc, UNUSED char **argv) {
+  hello();
+  
   Console writer;
   writer.print("Welcome to bazel101 tutorials!");
 
@@ -33,8 +35,8 @@ int main(UNUSED int argc, UNUSED char **argv) {
   History h;
   h.clearHistory();
 
-  adder calc;
-  cout << "sum (90, 10) = " << calc.add(90, 10) << endl;
+  // adder calc;
+  // cout << "sum (90, 10) = " << calc.add(90, 10) << endl;
 
   // // calling objective c from c++
   // Greet g;
