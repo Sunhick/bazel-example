@@ -33,7 +33,8 @@ cc_binary(
         "common.h",
     ] + select({
         "//tools/conditions:windows" : ["windows.cc"],
-        "//tools/conditions:linux" : ["linux.cc"]
+        "//tools/conditions:linux" : ["linux.cc"],
+        "//conditions:default" : ["default.cc"],
     }),
     deps = [
         "//console:libconsole",
