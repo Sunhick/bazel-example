@@ -44,8 +44,13 @@ cc_binary(
         # "//3rd-party:math2",
        "@tiger//session:session",
         "@gnu//gnu:profile",
-        "@duck//:history"
-    ],
+        "@duck//:history",
+        # "//platform:ui"
+    ] + select({
+        "//tools/conditions:windows" : ["//platform:winui"],
+        "//tools/conditions:linux" : ["//platform:linux"],
+        "//conditions:default" : ["//platform:defui"],        
+    }),
     linkstatic = 0,
     visibility = ["//visibility:public"]
 )

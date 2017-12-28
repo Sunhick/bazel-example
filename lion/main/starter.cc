@@ -10,6 +10,7 @@
 #include "history/history.h"
 #include "main/common.h"
 #include "session/session.h"
+#include "platform/ui.h"
 
 using namespace std;
 using namespace bazel101::console;
@@ -42,5 +43,7 @@ int main(UNUSED int argc, UNUSED char **argv) {
   // Greet g;
   // greet(&g, nullptr);
 
+  std::unique_ptr<ui> ui = createUI();
+  ui->show();
   return 0;
 }
