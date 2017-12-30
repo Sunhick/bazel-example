@@ -1,4 +1,4 @@
-# bazel101
+# bazel example
 Using bazel build system
 
 ## Building
